@@ -1,0 +1,60 @@
+<!-- 1. Load Leaflet CSS & JS (free CDN) -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  integrity="sha256-YDv2hE2G03SLlzFDmPSbR6W1BWUC5nC0yM4JjHmR0u8="
+  crossorigin=""
+/>
+<script
+  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-o9N1j7kM9P2RYk8z6H9YO2N1WqnnzofM8a+UOmMQwE0="
+  crossorigin=""
+></script>
+
+<!-- 2. Map container -->
+<div id="goodwallMap" style="height: 420px; border-radius: 8px;"></div>
+
+<!-- 3. Init script -->
+<script>
+  // Center roughly between Pierce & King counties
+  const map = L.map('goodwallMap').setView([47.3, -122.3], 9);
+
+  // OpenStreetMap tiles
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution:
+      '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+  }).addTo(map);
+
+  // --- Pins for completed projects ---
+  const jobs = [
+    {
+      name_en: 'Tacoma – Basement Dry-Out',
+      name_es: 'Tacoma – Secado de sótano',
+      coords: [47.253, -122.446],
+    },
+    {
+      name_en: 'Burien – Certified Mold Remediation',
+      name_es: 'Burien – Remediación de moho certificada',
+      coords: [47.471, -122.339],
+    },
+    {
+      name_en: 'Orting – Flood Pump-Out',
+      name_es: 'Orting – Bombeo tras inundación',
+      coords: [47.097, -122.206],
+    },
+    {
+      name_en: 'Auburn – Burst-Pipe Rebuild',
+      name_es: 'Auburn – Reconstrucción por tubería rota',
+      coords: [47.307, -122.228],
+    },
+  ];
+
+  jobs.forEach((job) => {
+    L.marker(job.coords)
+      .addTo(map)
+      .bindPopup(
+        `<strong>${job.name_en}</strong><br/><em>${job.name_es}</em>`,
+        { closeButton: false }
+      );
+  });
+</script>

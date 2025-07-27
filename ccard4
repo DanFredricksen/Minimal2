@@ -1,0 +1,150 @@
+<!-- 🧱 CARD GRID – 6 TARJETAS -->
+<div class="card-grid">
+
+  <!-- 1 ▸ Bathroom -->
+  <a class="card-link" href="https://thegoodwall.org/bathroom-remodel" target="_top" rel="noopener noreferrer">
+    <article class="service-card" style="--bg:url('https://plus.unsplash.com/premium_photo-1661902468735-eabf780f8ff6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+      <h3>Bathroom Remodel</h3>
+      <p>Hire our crew to bring your bathroom back to life with comfort and style.</p>
+    </article>
+  </a>
+
+  <!-- 2 ▸ Kitchen -->
+  <a class="card-link" href="https://thegoodwall.org/kitchen-remodel" target="_top" rel="noopener noreferrer">
+    <article class="service-card" style="--bg:url('https://images.unsplash.com/photo-1560185127-2d06c6d08d3d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+      <h3>Kitchen Remodel</h3>
+      <p>Let us build a beautiful kitchen that blends function with your taste.</p>
+    </article>
+  </a>
+
+  <!-- 3 ▸ Painting -->
+  <a class="card-link" href="https://thegoodwall.org/painting" target="_top" rel="noopener noreferrer">
+    <article class="service-card" style="--bg:url('https://plus.unsplash.com/premium_photo-1680297036893-d6faac34ea94?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+      <h3>Professional Painting</h3>
+      <p>Clean, efficient painting that transforms your space without the mess.</p>
+    </article>
+  </a>
+
+  <!-- 4 ▸ Home Remodel -->
+  <a class="card-link" href="https://thegoodwall.org/home-remodeling" target="_top" rel="noopener noreferrer">
+    <article class="service-card" style="--bg:url('https://plus.unsplash.com/premium_photo-1681589433916-1043f84720d5?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+      <h3>Full Home Remodeling</h3>
+      <p>Our skilled team can transform any part of your home—inside or out.</p>
+    </article>
+  </a>
+
+  <!-- 5 ▸ Flooring (ejemplo extra) -->
+  <a class="card-link" href="https://thegoodwall.org/flooring" target="_top" rel="noopener noreferrer">
+    <article class="service-card" style="--bg:url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.1.0');">
+      <h3>Premium Flooring</h3>
+      <p>Hardwood, tile or vinyl — flawless installation every time.</p>
+    </article>
+  </a>
+
+  <!-- 6 ▸ Decks & Patios (ejemplo extra) -->
+  <a class="card-link" href="https://thegoodwall.org/decks-patios" target="_top" rel="noopener noreferrer">
+    <article class="service-card" style="--bg:url('https://images.unsplash.com/photo-1613071350204-549b15b5cffa?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.1.0');">
+      <h3>Decks &amp; Patios</h3>
+      <p>Outdoor living spaces built to last and impress.</p>
+    </article>
+  </a>
+
+</div>
+
+<!-- 🎨 ESTILOS CSS -->
+<style>
+:root{
+  --card-h:320px;
+  --overlay:rgba(0,0,0,.35);
+  --overlay-hover:rgba(0,0,0,.55);
+  --panel:rgba(147 154 169 /.8);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+
+/* === GRID ==================================================== */
+.card-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:1.5rem;
+  padding:2rem;
+  max-width:1200px;
+  margin-inline:auto;
+}
+/* Fuerza 4 columnas en ≥ 1024 px */
+@media (min-width:1024px){
+  .card-grid{grid-template-columns:repeat(4,1fr);}
+}
+
+/* === LINK ==================================================== */
+.card-link{
+  text-decoration:none;
+  color:inherit;
+}
+.card-link:focus-visible{
+  outline:3px solid #fff;
+  outline-offset:3px;
+}
+
+/* === CARD ==================================================== */
+.service-card{
+  position:relative;
+  height:var(--card-h);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:1.5rem;
+  color:#fff;                      /* letras siempre blancas */
+  background-image:var(--bg);
+  background-size:cover;
+  background-position:center;
+}
+
+/* Overlay negro (oscurece SOLO la foto) */
+.service-card::before{
+  content:"";
+  position:absolute;
+  top:0;right:0;bottom:0;left:0;   /* compatibilidad total */
+  background:var(--overlay);
+  transition:background .3s ease;
+  z-index:0;
+}
+.card-link:hover .service-card::before,
+.card-link:focus-visible .service-card::before{
+  background:var(--overlay-hover);
+}
+
+/* Panel gris decorativo */
+.service-card::after{
+  content:"";
+  position:absolute;
+  inset:8% 6%;
+  background:var(--panel);
+  opacity:0;
+  border-radius:10px;
+  transition:opacity .3s ease;
+  z-index:1;
+  pointer-events:none;
+}
+.card-link:hover .service-card::after,
+.card-link:focus-visible .service-card::after{opacity:1}
+
+/* Texto por encima de todo */
+.service-card > h3,
+.service-card > p{
+  position:relative;
+  z-index:2;
+  text-shadow:1px 1px 4px #0006;
+}
+.service-card h3{font-size:2rem}
+.service-card p{font-size:1.1rem;margin-top:.8rem;max-width:680px}
+
+/* === MÓVIL =================================================== */
+@media (max-width:768px){
+  .card-grid{gap:1rem;padding:0}
+  .service-card{height:300px;width:100%}
+  .service-card h3{font-size:1.6rem}
+  .service-card p{font-size:1rem}
+}
+</style>

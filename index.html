@@ -1,0 +1,1230 @@
+<code><!-- 🧱 CARD CONTAINER -->
+    <div class="card-grid">
+    
+      <!-- 🔗 Bathroom -->
+      <a href="https://thegoodwall.org/bathroom-remodel" class="card-link" target="_top">
+        <div class="service-card" style="background-image: url('https://plus.unsplash.com/premium_photo-1661902468735-eabf780f8ff6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+          <div class="overlay">
+            <h3>Bathroom Remodel</h3>
+            <p>Hire our crew to bring your bathroom back to life with comfort and style.</p>
+            <div class="hover-panel"></div>
+          </div>
+        </div>
+      </a>
+    
+      <!-- 🔗 Kitchen -->
+      <a href="https://thegoodwall.org/kitchen-remodel" class="card-link" target="_top">
+        <div class="service-card" style="background-image: url('https://images.unsplash.com/photo-1560185127-2d06c6d08d3d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+          <div class="overlay">
+            <h3>Kitchen Remodel</h3>
+            <p>Let us build a beautiful kitchen that blends function with your taste.</p>
+            <div class="hover-panel"></div>
+          </div>
+        </div>
+      </a>
+    
+      <!-- 🔗 Painting -->
+      <a href="https://thegoodwall.org/painting" class="card-link" target="_top">
+        <div class="service-card" style="background-image: url('https://plus.unsplash.com/premium_photo-1680297036893-d6faac34ea94?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+          <div class="overlay">
+            <h3>Professional Painting</h3>
+            <p>Clean, efficient painting that transforms your space without the mess.</p>
+            <div class="hover-panel"></div>
+          </div>
+        </div>
+      </a>
+    
+      <!-- 🔗 Home Remodel -->
+      <a href="https://thegoodwall.org/home-remodeling" class="card-link" target="_top">
+        <div class="service-card" style="background-image: url('https://plus.unsplash.com/premium_photo-1681589433916-1043f84720d5?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+          <div class="overlay">
+            <h3>Full Home Remodeling</h3>
+            <p>Our skilled team can transform any part of your home—inside or out.</p>
+            <div class="hover-panel"></div>
+          </div>
+        </div>
+      </a>
+    
+    </div>
+    
+    <!-- 🎨 CSS STYLES -->
+    <style>
+    /* 🧱 Responsive Grid Layout */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    /* Force 4 columns on large screens */
+    @media (min-width: 1024px) {
+      .card-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+    
+    /* 🔗 Card Links */
+    .card-link {
+      text-decoration: none;
+      display: block;
+      color: inherit;
+    }
+    .card-link:visited {
+      color: inherit;
+    }
+    
+    /* 🖼 Card Background Image */
+    .service-card {
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      height: 320px;
+      min-height: 320px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    /* 🌫 Default dark overlay */
+    .service-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.35);
+      z-index: 0;
+      transition: background-color 0.3s ease;
+    }
+    
+    /* 🌚 Hover effect: darker overlay */
+    .service-card:hover::before {
+      background-color: rgba(0, 0, 0, 0.55);
+    }
+    
+    /* ✍️ Overlay content */
+    .overlay {
+      position: relative;
+      z-index: 2; /* por encima del overlay negro */
+      width: 100%;
+      height: 100%;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 1.5rem;
+      font-family: 'Times New Roman', Times, serif;
+    }
+    
+    /* 📝 Headings */
+    .overlay h3 {
+      font-size: 2rem;
+      margin: 0;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    }
+    
+    /* 🧾 Paragraphs */
+    .overlay p {
+      font-size: 1.1rem;
+      margin-top: 0.8rem;
+      max-width: 700px;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    }
+    
+    /* 📱 Mobile styles */
+    @media (max-width: 768px) {
+      .card-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0;
+      }
+      .service-card {
+        width: 100vw;
+        height: 300px;
+      }
+      .overlay h3 {
+        font-size: 1.6rem;
+      }
+      .overlay p {
+        font-size: 1rem;
+      }
+    }
+    
+    /* 🩶 Gray hover panel with margin */
+    .hover-panel {
+      position: absolute;
+      top: 8%;
+      left: 6%;
+      width: 88%;
+      height: 84%;
+      background-color: rgba(147, 154, 169, 0.80);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 1; /* justo debajo del texto */
+      pointer-events: none;
+      border-radius: 10px;
+    }
+    
+    /* Mostrar el panel gris en hover */
+    .service-card:hover .hover-panel {
+      opacity: 1;
+    }
+    
+    /* ─── Asegurar que h3 y p siempre estén por encima del hover-panel ─── */
+    .overlay h3,
+    .overlay p {
+      position: relative;
+      z-index: 3;
+    }
+    </style>
+    </code>
+
+
+
+
+
+
+
+
+
+
+
+<section style="font-family:'Lato','Times New Roman', serif; max-width:900px; margin:auto; padding:20px;">
+    <header>
+      <h2 style="text-align:center; color:#2c3e50; margin-bottom:30px;">
+        27 Essential Kitchen Remodel Tips
+      </h2>
+    </header>
+  
+    <nav aria-label="Summary of tips" style="margin-bottom:20px;">
+      <ul style="list-style:none; padding:0; display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:5px;">
+        ${Array.from({length:27},(_,i)=>`<li><a href="#tip${i+1}" style="text-decoration:none; color:#3498db;">Tip ${i+1}</a></li>`).join('')}
+      </ul>
+    </nav>
+  
+    <div id="tips" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px;">
+      ${[
+        "Measure thrice, order once\n\nConfirm every width—cabinets, appliances, walkways—before placing a single order to avoid costly returns.",
+        "Prioritize the work triangle\n\nKeep sink, stove, and refrigerator within roughly four feet of one another to minimize steps while cooking.",
+        "Opt for full-extension drawers\n\nDrawers that pull out completely reveal everything at a glance, eliminating the black hole at the back of a shelf.",
+        "Go vertical with 42 in uppers\n\nCeiling-height cabinets add about 15 % more storage and banish dust-catching soffits.",
+        "Install under-cabinet LEDs\n\nTask lighting brightens counters, improves safety, and adds ambience without shadows.",
+        "Choose 2 cm quartz counters\n\nThe slim profile costs less, lightens cabinet load, and resists stains better than natural stone.",
+        "Use a single-bowl sink\n\nOne large basin frees extra counter space in compact kitchens while still accommodating pots and trays.",
+        "Install a pull-out trash bin\n\nA hidden waste station controls odors and keeps floors clear.",
+        "Plan 200 lux on counters\n\nAdequate brightness reduces eye strain and helps spot crumbs before they harden.",
+        "Pocket doors beat swing doors\n\nSliding doors reclaim almost eight square feet of floor area otherwise lost to door arcs.",
+        "Include at least one deep drawer\n\nOversized drawers handle pots, pans, and small appliances better than fixed shelves.",
+        "Ventilate with a slim hood\n\nRecirculating low-profile hoods clear steam and grease without requiring exterior ductwork.",
+        "Stagger cabinet depths\n\nVarying depths add visual interest and prevent elbows from bumping upper-cabinet corners.",
+        "Soft-close hinges equal quiet life\n\nThey prolong cabinet life and end door‑slamming forever.",
+        "Add toe‑kick drawers\n\nHidden drawers in the toe‑kick area store baking sheets where dust once gathered.",
+        "Use light, reflective backsplashes\n\nGlossy tile or glass reflects light, making small kitchens feel larger.",
+        "Select Energy‑Star appliances\n\nEfficient models can cut utility bills by roughly 15 % over standard units.",
+        "Plan outlets every 36 in\n\nStrategically placed receptacles eliminate tangled extension cords and overloaded power strips.",
+        "Reserve 10 % contingency cash\n\nUnexpected expenses—from water‑damaged studs to code upgrades—are inevitable; plan for them.",
+        "Order materials before demo\n\nHaving flooring, tile, and fixtures on‑site prevents the costly downtime of an empty jobsite.",
+        "Label every box by cabinet location\n\nInstallers work faster—and you field fewer questions—when each carton is clearly marked.",
+        "Paint cabinets before install\n\nFinishing doors and boxes off‑site avoids drips on new floors and speeds the punch‑list.",
+        "Use a laser level every time\n\nPerfectly straight lines on tile, counters, and cabinetry separate a pro finish from a DIY look.",
+        "Seal grout within 72 h\n\nEarly sealing blocks stains and mildew before they penetrate porous grout lines.",
+        "Keep cut‑out templates\n\nCountertop and sink templates help future contractors match replacement parts precisely.",
+        "Photograph rough‑ins\n\nPictures of plumbing and wiring behind walls are priceless for future repairs or upgrades.",
+        "Celebrate with a test dinner\n\nCooking a full meal in the finished space confirms that the layout truly works before final sign‑off."
+      ].map((text,i) => {
+         const [title, body] = text.split("\n\n");
+         return `<article id="tip${i+1}" class="tip-card">
+           <label>
+             <input type="checkbox">
+             <div class="card-inner">
+               <h3>${title}</h3>
+               <p>${body}</p>
+             </div>
+           </label>
+         </article>`;
+      }).join('')}
+    </div>
+  
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+  
+      .tip-card input { display:none; }
+      .tip-card {
+        background: rgba(10, 25, 50, 0.6);
+        color: #ecf0f1;
+        border-radius: 12px;
+        overflow: hidden;
+        position: relative;
+        transition: background 0.3s, transform 0.3s;
+      }
+      .tip-card:hover {
+        transform: translateY(-5px);
+        background: rgba(10, 25, 50, 0.8);
+      }
+      .tip-card .card-inner {
+        padding: 20px;
+      }
+      .tip-card h3 {
+        margin-top: 0;
+        font-size: 1.1em;
+        font-weight: 700;
+        color: #ecf0f1;
+      }
+      .tip-card p {
+        margin: 10px 0 0;
+        font-size: 0.95em;
+        line-height: 1.4;
+      }
+      .tip-card input:checked + .card-inner {
+        background: #f1c40f;
+        color: #2c3e50;
+      }
+      .tip-card input:checked + .card-inner h3,
+      .tip-card input:checked + .card-inner p {
+        color: #2c3e50;
+        text-decoration: line-through;
+      }
+    </style>
+  
+    <script>
+      // no JS needed: label + checkbox toggles checked + styles
+    </script>
+  </section>
+  <article class="tip-card">
+    <label>
+      <input type="checkbox">
+      <div class="card">
+        <h3>1. Measure thrice, order once</h3>
+        <p>Confirm every width—cabinets, appliances, walkways—before placing a single order to avoid costly returns.</p>
+      </div>
+    </label>
+  </article>
+  <section style="font-family:'Lato','Times New Roman',serif; max-width:1200px; margin:auto; padding:30px;">
+    <header>
+      <h2 style="text-align:center; color:#2c3e50;">27 Essential Kitchen Remodel Tips</h2>
+    </header>
+  
+    <div id="tips-grid" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:20px; margin-top:30px;">
+      <!-- 1 -->
+      <article class="tip-card">
+        <label>
+          <input type="checkbox">
+          <div class="card">
+            <h3>1. Measure thrice, order once</h3>
+            <p>Confirm every width—cabinets, appliances, walkways—before placing a single order to avoid costly returns.</p>
+          </div>
+        </label>
+      </article>
+  
+      <!-- 2 -->
+      <article class="tip-card">
+        <label><input type="checkbox">
+          <div class="card">
+            <h3>2. Prioritize the work triangle</h3>
+            <p>Keep sink, stove, and refrigerator within roughly four feet of one another to minimize steps while cooking.</p>
+          </div>
+        </label>
+      </article>
+  
+      <!-- 3 -->
+      <article class="tip-card">
+        <label><input type="checkbox">
+          <div class="card">
+            <h3>3. Opt for full-extension drawers</h3>
+            <p>Drawers that pull out completely reveal everything at a glance, eliminating the black hole at the back of a shelf.</p>
+          </div>
+        </label>
+      </article>
+  
+      <!-- 4 -->
+      <article class="tip-card">
+        <label><input type="checkbox">
+          <div class="card">
+            <h3>4. Go vertical with 42 in uppers</h3>
+            <p>Ceiling-height cabinets add about 15 % more storage and banish dust-catching soffits.</p>
+          </div>
+        </label>
+      </article>
+  
+      <!-- 5 -->
+      <article class="tip-card">
+        <label><input type="checkbox">
+          <div class="card">
+            <h3>5. Install under-cabinet LEDs</h3>
+            <p>Task lighting brightens counters, improves safety, and adds ambience without shadows.</p>
+          </div>
+        </label>
+      </article>
+  
+      <!-- 6–27 -->
+      <!-- Repite el mismo formato para todos los demás tips... (para ahorrar espacio aquí, continuaré el patrón si lo deseas) -->
+  
+    </div>
+  
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+  
+      .tip-card input { display: none; }
+  
+      .tip-card .card {
+        background: rgba(20, 30, 60, 0.6);
+        backdrop-filter: blur(12px);
+        color: #ecf0f1;
+        border-radius: 15px;
+        padding: 20px;
+        transition: all 0.3s ease;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+      }
+  
+      .tip-card:hover .card {
+        background: rgba(40, 60, 90, 0.8);
+        transform: translateY(-5px);
+      }
+  
+      .tip-card input:checked + .card {
+        background: #f1c40f !important;
+        color: #2c3e50;
+      }
+  
+      .tip-card input:checked + .card h3,
+      .tip-card input:checked + .card p {
+        color: #2c3e50;
+        text-decoration: line-through;
+      }
+  
+      .tip-card h3 {
+        margin: 0;
+        font-size: 1.15em;
+        font-weight: bold;
+      }
+  
+      .tip-card p {
+        margin-top: 10px;
+        font-size: 0.95em;
+        line-height: 1.5;
+      }
+    </style>
+  </section>
+  <section style="font-family:'Lato','Times New Roman',serif; max-width:1200px; margin:auto; padding:30px;">
+    <header>
+      <h2 style="text-align:center; color:#2c3e50;">27 Essential Kitchen Remodel Tips</h2>
+    </header>
+  
+    <div id="tips-grid" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:20px; margin-top:30px;">
+      <!-- Tip 1 -->
+      <article class="tip-card">
+        <label>
+          <input type="checkbox">
+          <div class="card">
+            <h3>1. Measure thrice, order once</h3>
+            <p>Confirm every width—cabinets, appliances, walkways—before placing a single order to avoid costly returns.</p>
+          </div>
+        </label>
+      </article>
+      <!-- Tip 2 -->
+      <article class="tip-card">
+        <label><input type="checkbox">
+          <div class="card">
+            <h3>2. Prioritize the work triangle</h3>
+            <p>Keep sink, stove, and refrigerator within roughly four feet of one another to minimize steps while cooking.</p>
+          </div>
+        </label>
+      </article>
+      <!-- Tip 3 -->
+      <article class="tip-card">
+        <label><input type="checkbox">
+          <div class="card">
+            <h3>3. Opt for full‑extension drawers</h3>
+            <p>Drawers that pull out completely reveal everything at a glance, eliminating the black hole at the back of a shelf.</p>
+          </div>
+        </label>
+      </article>
+      <!-- Tip 4 -->
+      <article class="tip-card">
+        <label><input type="checkbox">
+          <div class="card">
+            <h3>4. Go vertical with 42 in uppers</h3>
+            <p>Ceiling‑height cabinets add about 15 % more storage and banish dust‑catching soffits.</p>
+          </div>
+        </label>
+      </article>
+      <!-- Tip 5 -->
+      <article class="tip-card">
+        <label><input type="checkbox">
+          <div class="card">
+            <h3>5. Install under‑cabinet LEDs</h3>
+            <p>Task lighting brightens counters, improves safety, and adds ambience without shadows.</p>
+          </div>
+        </label>
+      </article>
+      <!-- Tip 6 -->
+      <article class="tip-card">
+        <label><input type="checkbox">
+          <div class="card">
+            <h3>6. Choose 2 cm quartz counters</h3>
+            <p>The slim profile costs less, lightens cabinet load, and resists stains better than natural stone.</p>
+          </div>
+        </label>
+      </article>
+      <!-- Tip 7 -->
+      <article class="tip-card">
+        <label><input type="checkbox">
+          <div class="card">
+            <h3>7. Use a single‑bowl sink</h3>
+            <p>One large basin frees extra counter space in compact kitchens while still accommodating pots and trays.</p>
+          </div>
+        </label>
+      </article>
+      <!-- Tip 8 -->
+      <article class="tip-card">
+        <label><input type="checkbox">
+          <div class="card">
+            <h3>8. Install a pull‑out trash bin</h3>
+            <p>A hidden waste station controls odors and keeps floors clear.</p>
+          </div>
+        </label>
+      </article>
+      <!-- Tip 9 -->
+      <article class="tip-card">
+        <label><input type="checkbox">
+          <div class="card">
+            <h3>9. Plan 200 lux on counters</h3>
+            <p>Adequate brightness reduces eye strain and helps spot crumbs before they harden.</p>
+          </div>
+        </label>
+      </article>
+      <!-- Tip 10 -->
+      <article class="tip-card">
+        <label><input type="checkbox">
+          <div class="card">
+            <h3>10. Pocket doors beat swing doors</h3>
+            <p>Sliding doors reclaim almost eight square feet of floor area otherwise lost to door arcs.</p>
+          </div>
+        </label>
+      </article>
+      <!-- Tip 11 -->
+      <article class="tip-card">
+        <label><input type="checkbox">
+          <div class="card">
+            <h3>11. Include at least one deep drawer</h3>
+            <p>Oversized drawers handle pots, pans, and small appliances better than fixed shelves.</p>
+          </div>
+        </label>
+      </article>
+      <!-- Tip 12 -->
+      <article class="tip-card">
+        <label><input type="checkbox">
+          <div class="card">
+            <h3>12. Ventilate with a slim hood</h3>
+            <p>Recirculating low‑profile hoods clear steam and grease without requiring exterior ductwork.</p>
+          </div>
+        </label>
+      </article>
+      <!-- Tip 13 -->
+      <article class="tip-card">
+        <label><input type="checkbox">
+          <div class="card">
+            <h3>13. Stagger cabinet depths</h3>
+            <p>Varying depths add visual interest and prevent elbows from bumping upper‑cabinet corners.</p>
+          </div>
+        </label>
+      </article>
+      <!-- Tip 14 -->
+      <article class="tip-card">
+        <label><input type="checkbox">
+          <div class="card">
+            <h3>14. Soft‑close hinges equal quiet life</h3>
+            <p>They prolong cabinet life and end door‑slamming forever.</p>
+          </div>
+        </label>
+      </article>
+      <!-- Tip 15 -->
+      <article class="tip-card">
+        <label><input type="checkbox">
+          <div class="card">
+            <h3>15. Add toe‑kick drawers</h3>
+            <p>Hidden drawers in the toe‑kick area store baking sheets where dust once gathered.</p>
+          </div>
+        </label>
+      </article>
+      <!-- Tip 16 -->
+      <article class="tip-card">
+        <label><input type="checkbox">
+          <div class="card">
+            <h3>16. Use light, reflective backsplashes</h3>
+            <p>Glossy tile or glass reflects light, making small kitchens feel larger.</p>
+          </div>
+        </label>
+      </article>
+      <!-- Tip 17 -->
+      <article class="tip-card">
+        <label><input type="checkbox">
+          <div class="card">
+            <h3>17. Select Energy‑Star appliances</h3>
+            <p>Efficient models can cut utility bills by roughly 15 % over standard units.</p>
+          </div>
+        </label>
+      </article>
+      <!-- Tip 18 -->
+      <article class="tip-card">
+        <label><input type="checkbox">
+          <div class="card">
+            <h3>18. Plan outlets every 36 in</h3>
+            <p>Strategically placed receptacles eliminate tangled extension cords and overloaded power strips.</p>
+          </div>
+        </label>
+      </article>
+      <!-- Tip 19 -->
+      <article class="tip-card">
+        <label><input type="checkbox">
+          <div class="card">
+            <h3>19. Reserve 10 % contingency cash</h3>
+            <p>Unexpected expenses—from water‑damaged studs to code upgrades—are inevitable; plan for them.</p>
+          </div>
+        </label>
+      </article>
+      <!-- Tip 20 -->
+      <article class="tip-card">
+        <label><input type="checkbox">
+          <div class="card">
+            <h3>20. Order materials before demo</h3>
+            <p>Having flooring, tile, and fixtures on‑site prevents the costly downtime of an empty jobsite.</p>
+          </div>
+        </label>
+      </article>
+      <!-- Tip 21 -->
+      <article class="tip-card">
+        <label><input type="checkbox">
+          <div class="card">
+            <h3>21. Label every box by cabinet location</h3>
+            <p>Installers work faster—and you field fewer questions—when each carton is clearly marked.</p>
+          </div>
+        </label>
+      </article>
+      <!-- Tip 22 -->
+      <article class="tip-card">
+        <label><input type="checkbox">
+          <div class="card">
+            <h3>22. Paint cabinets before install</h3>
+            <p>Finishing doors and boxes off‑site avoids drips on new floors and speeds the punch‑list.</p>
+          </div>
+        </label>
+      </article>
+      <!-- Tip 23 -->
+      <article class="tip-card">
+        <label><input type="checkbox">
+          <div class="card">
+            <h3>23. Use a laser level every time</h3>
+            <p>Perfectly straight lines on tile, counters, and cabinetry separate a pro finish from a DIY look.</p>
+          </div>
+        </label>
+      </article>
+      <!-- Tip 24 -->
+      <article class="tip-card">
+        <label><input type="checkbox">
+          <div class="card">
+            <h3>24. Seal grout within 72 h</h3>
+            <p>Early sealing blocks stains and mildew before they penetrate porous grout lines.</p>
+          </div>
+        </label>
+      </article>
+      <!-- Tip 25 -->
+      <article class="tip-card">
+        <label><input type="checkbox">
+          <div class="card">
+            <h3>25. Keep cut‑out templates</h3>
+            <p>Countertop and sink templates help future contractors match replacement parts precisely.</p>
+          </div>
+        </label>
+      </article>
+      <!-- Tip 26 -->
+      <article class="tip-card">
+        <label><input type="checkbox">
+          <div class="card">
+            <h3>26. Photograph rough‑ins</h3>
+            <p>Pictures of plumbing and wiring behind walls are priceless for future repairs or upgrades.</p>
+          </div>
+        </label>
+      </article>
+      <!-- Tip 27 -->
+      <article class="tip-card">
+        <label><input type="checkbox">
+          <div class="card">
+            <h3>27. Celebrate with a test dinner</h3>
+            <p>Cooking a full meal in the finished space confirms that the layout truly works before final sign‑off.</p>
+          </div>
+        </label>
+      </article>
+    </div>
+  
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+      .tip-card input { display: none; }
+      .tip-card .card {
+        background: rgba(20, 30, 60, 0.6);
+        backdrop-filter: blur(12px);
+        color: #ecf0f1;
+        border-radius: 15px;
+        padding: 20px;
+        transition: all 0.3s ease;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+      }
+      .tip-card:hover .card {
+        background: rgba(40, 60, 90, 0.8);
+        transform: translateY(-5px);
+      }
+      .tip-card input:checked + .card {
+        background: #f1c40f !important;
+        color: #2c3e50;
+      }
+      .tip-card input:checked + .card h3,
+      .tip-card input:checked + .card p {
+        color: #2c3e50;
+        text-decoration: line-through;
+      }
+      .tip-card h3 {
+        margin: 0;
+        font-size: 1.15em;
+        font-weight: bold;
+      }
+      .tip-card p {
+        margin-top: 10px;
+        font-size: 0.95em;
+        line-height: 1.5;
+      }
+    </style>
+  </section>
+
+  <section style="font-family:'Lato','Times New Roman',serif; max-width:1200px; margin:auto; padding:30px;">
+    <header>
+      <h2 style="text-align:center; color:#2c3e50;">10 Things You <em>Really</em> Should Know Before Starting</h2>
+    </header>
+  
+    <div id="tips-grid" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:20px; margin-top:30px;">
+      <!-- Tip 1 -->
+      <article class="tip-card">
+        <label>
+          <input type="checkbox">
+          <div class="card">
+            <h3>1. Cabinets can take 12 weeks—start design early</h3>
+            <p>Lead times for custom or semi-custom boxes are longer than most homeowners expect.</p>
+          </div>
+        </label>
+      </article>
+  
+      <!-- Tip 2 -->
+      <article class="tip-card">
+        <label><input type="checkbox">
+          <div class="card">
+            <h3>2. Moving plumbing drives costs up fast</h3>
+            <p>Relocating supply or drain lines often requires cutting concrete or reframing walls—budget accordingly.</p>
+          </div>
+        </label>
+      </article>
+  
+      <!-- Tip 3 -->
+      <article class="tip-card">
+        <label><input type="checkbox">
+          <div class="card">
+            <h3>3. Old floors might hide asbestos—test first</h3>
+            <p>Professional lab tests cost little compared with abatement fees and health risks.</p>
+          </div>
+        </label>
+      </article>
+  
+      <!-- Tip 4 -->
+      <article class="tip-card">
+        <label><input type="checkbox">
+          <div class="card">
+            <h3>4. Electrical panels may need upgrading</h3>
+            <p>Modern appliances and lighting can overload dated 100-amp service; check capacity before ordering.</p>
+          </div>
+        </label>
+      </article>
+  
+      <!-- Tip 5 -->
+      <article class="tip-card">
+        <label><input type="checkbox">
+          <div class="card">
+            <h3>5. Measure elevator and doorway widths</h3>
+            <p>Appliances that fit the kitchen layout still need to travel through hallways, stairwells, and lifts.</p>
+          </div>
+        </label>
+      </article>
+  
+      <!-- Tip 6 -->
+      <article class="tip-card">
+        <label><input type="checkbox">
+          <div class="card">
+            <h3>6. Neighbors appreciate planned noise schedules</h3>
+            <p>Posting work hours prevents complaints and potential stop-work orders.</p>
+          </div>
+        </label>
+      </article>
+  
+      <!-- Tip 7 -->
+      <article class="tip-card">
+        <label><input type="checkbox">
+          <div class="card">
+            <h3>7. Dust migrates—seal adjacent rooms</h3>
+            <p>Plastic zip walls and negative-pressure fans keep grit out of living areas and HVAC systems.</p>
+          </div>
+        </label>
+      </article>
+  
+      <!-- Tip 8 -->
+      <article class="tip-card">
+        <label><input type="checkbox">
+          <div class="card">
+            <h3>8. Backsplash height affects tile waste</h3>
+            <p>Designing to full-tile increments reduces off-cuts and lowers material cost.</p>
+          </div>
+        </label>
+      </article>
+  
+      <!-- Tip 9 -->
+      <article class="tip-card">
+        <label><input type="checkbox">
+          <div class="card">
+            <h3>9. Thin quartz needs extra support spans</h3>
+            <p>A 2 cm slab may require plywood decking or additional brackets to prevent flexing.</p>
+          </div>
+        </label>
+      </article>
+  
+      <!-- Tip 10 -->
+      <article class="tip-card">
+        <label><input type="checkbox">
+          <div class="card">
+            <h3>10. Change orders add about 20 % to costs—finalize design first</h3>
+            <p>Last-minute alterations inflate budgets and extend timelines; lock decisions before demolition day.</p>
+          </div>
+        </label>
+      </article>
+    </div>
+  
+    <style>
+      .tip-card input { display: none; }
+      .tip-card .card {
+        background: rgba(20, 30, 60, 0.6);
+        backdrop-filter: blur(12px);
+        color: #ecf0f1;
+        border-radius: 15px;
+        padding: 20px;
+        transition: all 0.3s ease;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+      }
+      .tip-card:hover .card {
+        background: rgba(40, 60, 90, 0.8);
+        transform: translateY(-5px);
+      }
+      .tip-card input:checked + .card {
+        background: #f1c40f !important;
+        color: #2c3e50;
+      }
+      .tip-card input:checked + .card h3,
+      .tip-card input:checked + .card p {
+        color: #2c3e50;
+        text-decoration: line-through;
+      }
+      .tip-card h3 {
+        margin: 0;
+        font-size: 1.15em;
+        font-weight: bold;
+      }
+      .tip-card p {
+        margin-top: 10px;
+        font-size: 0.95em;
+        line-height: 1.5;
+      }
+    </style>
+  </section>
+  <section style="font-family:'Lato','Times New Roman',serif; max-width:1000px; margin:auto; padding:30px;">
+    <header>
+      <h2 style="text-align:center; color:#2c3e50;">10 Things You <em>Really</em> Should Know Before Starting</h2>
+    </header>
+  
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; margin-top:30px;">
+      ${[
+        ["Cabinets can take 12 weeks—start design early", "Lead times for custom or semi-custom boxes are longer than most homeowners expect."],
+        ["Moving plumbing drives costs up fast", "Relocating supply or drain lines often requires cutting concrete or reframing walls—budget accordingly."],
+        ["Old floors might hide asbestos—test first", "Professional lab tests cost little compared with abatement fees and health risks."],
+        ["Electrical panels may need upgrading", "Modern appliances and lighting can overload dated 100-amp service; check capacity before ordering."],
+        ["Measure elevator and doorway widths", "Appliances that fit the kitchen layout still need to travel through hallways, stairwells, and lifts."],
+        ["Neighbors appreciate planned noise schedules", "Posting work hours prevents complaints and potential stop-work orders."],
+        ["Dust migrates—seal adjacent rooms", "Plastic zip walls and negative-pressure fans keep grit out of living areas and HVAC systems."],
+        ["Backsplash height affects tile waste", "Designing to full-tile increments reduces off-cuts and lowers material cost."],
+        ["Thin quartz needs extra support spans", "A 2 cm slab may require plywood decking or additional brackets to prevent flexing."],
+        ["Change orders add 20 % to costs—finalize design first", "Last-minute alterations inflate budgets and extend timelines; lock decisions before demolition day."]
+      ].map(([title, desc], i) => `
+        <article class="neo-card">
+          <h3>${i + 1}. ${title}</h3>
+          <p>${desc}</p>
+        </article>
+      `).join('')}
+    </div>
+  
+    <style>
+      .neo-card {
+        background: #e0e0e0;
+        border-radius: 20px;
+        padding: 25px;
+        box-shadow: 8px 8px 15px #bebebe,
+                    -8px -8px 15px #ffffff;
+        transition: all 0.2s ease-in-out;
+      }
+  
+      .neo-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 4px 4px 10px #bebebe,
+                    -4px -4px 10px #ffffff;
+      }
+  
+      .neo-card h3 {
+        margin-top: 0;
+        font-size: 1.1em;
+        color: #333;
+      }
+  
+      .neo-card p {
+        font-size: 0.95em;
+        color: #555;
+        margin-top: 8px;
+      }
+    </style>
+  </section>
+  <section style="font-family:'Lato','Times New Roman',serif; max-width:800px; margin:auto; padding:30px;">
+    <header>
+      <h2 style="text-align:center; color:#2c3e50;">10 Things You <em>Really</em> Should Know Before Starting</h2>
+    </header>
+  
+    <div class="accordion">
+      ${[
+        ["Cabinets can take 12 weeks—start design early", "Lead times for custom or semi-custom boxes are longer than most homeowners expect."],
+        ["Moving plumbing drives costs up fast", "Relocating supply or drain lines often requires cutting concrete or reframing walls—budget accordingly."],
+        ["Old floors might hide asbestos—test first", "Professional lab tests cost little compared with abatement fees and health risks."],
+        ["Electrical panels may need upgrading", "Modern appliances and lighting can overload dated 100-amp service; check capacity before ordering."],
+        ["Measure elevator and doorway widths", "Appliances that fit the kitchen layout still need to travel through hallways, stairwells, and lifts."],
+        ["Neighbors appreciate planned noise schedules", "Posting work hours prevents complaints and potential stop-work orders."],
+        ["Dust migrates—seal adjacent rooms", "Plastic zip walls and negative-pressure fans keep grit out of living areas and HVAC systems."],
+        ["Backsplash height affects tile waste", "Designing to full-tile increments reduces off-cuts and lowers material cost."],
+        ["Thin quartz needs extra support spans", "A 2 cm slab may require plywood decking or additional brackets to prevent flexing."],
+        ["Change orders add 20 % to costs—finalize design first", "Last-minute alterations inflate budgets and extend timelines; lock decisions before demolition day."]
+      ].map(([title, desc], i) => `
+        <details>
+          <summary>${i + 1}. ${title}</summary>
+          <p>${desc}</p>
+        </details>
+      `).join('')}
+    </div>
+  
+    <style>
+      details {
+        background: #f9f9f9;
+        padding: 15px 20px;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        transition: background 0.3s;
+      }
+  
+      summary {
+        font-weight: bold;
+        cursor: pointer;
+        color: #2c3e50;
+      }
+  
+      summary::marker {
+        color: #3498db;
+      }
+  
+      details[open] {
+        background: #fff9e6;
+        border-color: #f1c40f;
+      }
+  
+      details p {
+        margin: 10px 0 0;
+        font-size: 0.95em;
+        color: #555;
+      }
+    </style>
+  </section>
+  <section style="font-family:'Lato','Times New Roman',serif; max-width:1000px; margin:auto; padding:30px;">
+    <header>
+      <h2 style="text-align:center; color:#2c3e50;">10 Things You <em>Really</em> Should Know Before Starting</h2>
+    </header>
+  
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; margin-top:30px;">
+      <article class="neo-card">
+        <h3>1. Cabinets can take 12 weeks—start design early</h3>
+        <p>Lead times for custom or semi-custom boxes are longer than most homeowners expect.</p>
+      </article>
+  
+      <article class="neo-card">
+        <h3>2. Moving plumbing drives costs up fast</h3>
+        <p>Relocating supply or drain lines often requires cutting concrete or reframing walls—budget accordingly.</p>
+      </article>
+  
+      <article class="neo-card">
+        <h3>3. Old floors might hide asbestos—test first</h3>
+        <p>Professional lab tests cost little compared with abatement fees and health risks.</p>
+      </article>
+  
+      <article class="neo-card">
+        <h3>4. Electrical panels may need upgrading</h3>
+        <p>Modern appliances and lighting can overload dated 100-amp service; check capacity before ordering.</p>
+      </article>
+  
+      <article class="neo-card">
+        <h3>5. Measure elevator and doorway widths</h3>
+        <p>Appliances that fit the kitchen layout still need to travel through hallways, stairwells, and lifts.</p>
+      </article>
+  
+      <article class="neo-card">
+        <h3>6. Neighbors appreciate planned noise schedules</h3>
+        <p>Posting work hours prevents complaints and potential stop-work orders.</p>
+      </article>
+  
+      <article class="neo-card">
+        <h3>7. Dust migrates—seal adjacent rooms</h3>
+        <p>Plastic zip walls and negative-pressure fans keep grit out of living areas and HVAC systems.</p>
+      </article>
+  
+      <article class="neo-card">
+        <h3>8. Backsplash height affects tile waste</h3>
+        <p>Designing to full-tile increments reduces off-cuts and lowers material cost.</p>
+      </article>
+  
+      <article class="neo-card">
+        <h3>9. Thin quartz needs extra support spans</h3>
+        <p>A 2 cm slab may require plywood decking or additional brackets to prevent flexing.</p>
+      </article>
+  
+      <article class="neo-card">
+        <h3>10. Change orders add about 20 % to costs—finalize design first</h3>
+        <p>Last-minute alterations inflate budgets and extend timelines; lock decisions before demolition day.</p>
+      </article>
+    </div>
+  
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+  
+      .neo-card {
+        background: #e0e0e0;
+        border-radius: 20px;
+        padding: 25px;
+        box-shadow: 8px 8px 15px #bebebe,
+                    -8px -8px 15px #ffffff;
+        transition: all 0.2s ease-in-out;
+      }
+  
+      .neo-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 4px 4px 10px #bebebe,
+                    -4px -4px 10px #ffffff;
+      }
+  
+      .neo-card h3 {
+        margin-top: 0;
+        font-size: 1.1em;
+        color: #333;
+      }
+  
+      .neo-card p {
+        font-size: 0.95em;
+        color: #555;
+        margin-top: 8px;
+      }
+    </style>
+  </section>
+
+
+  <code><!-- 🧱 CARD CONTAINER -->
+    <div class="card-grid">
+    
+      <!-- 🔗 Bathroom -->
+      <a href="https://thegoodwall.org/bathroom-remodel" class="card-link" target="_top">
+        <div class="service-card" style="background-image: url('https://plus.unsplash.com/premium_photo-1661902468735-eabf780f8ff6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+          <div class="overlay">
+            <h3>Bathroom Remodel</h3>
+            <p>Hire our crew to bring your bathroom back to life with comfort and style.</p>
+            <div class="hover-panel"></div>
+          </div>
+        </div>
+      </a>
+    
+      <!-- 🔗 Kitchen -->
+      <a href="https://thegoodwall.org/kitchen-remodel" class="card-link" target="_top">
+        <div class="service-card" style="background-image: url('https://images.unsplash.com/photo-1560185127-2d06c6d08d3d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+          <div class="overlay">
+            <h3>Kitchen Remodel</h3>
+            <p>Let us build a beautiful kitchen that blends function with your taste.</p>
+            <div class="hover-panel"></div>
+          </div>
+        </div>
+      </a>
+    
+      <!-- 🔗 Painting -->
+      <a href="https://thegoodwall.org/painting" class="card-link" target="_top">
+        <div class="service-card" style="background-image: url('https://plus.unsplash.com/premium_photo-1680297036893-d6faac34ea94?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+          <div class="overlay">
+            <h3>Professional Painting</h3>
+            <p>Clean, efficient painting that transforms your space without the mess.</p>
+            <div class="hover-panel"></div>
+          </div>
+        </div>
+      </a>
+    
+      <!-- 🔗 Home Remodel -->
+      <a href="https://thegoodwall.org/home-remodeling" class="card-link" target="_top">
+        <div class="service-card" style="background-image: url('https://plus.unsplash.com/premium_photo-1681589433916-1043f84720d5?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+          <div class="overlay">
+            <h3>Full Home Remodeling</h3>
+            <p>Our skilled team can transform any part of your home—inside or out.</p>
+            <div class="hover-panel"></div>
+          </div>
+        </div>
+      </a>
+    
+    </div>
+    
+    <!-- 🎨 CSS STYLES -->
+    <style>
+    /* 🧱 Responsive Grid Layout */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    /* Force 4 columns on large screens */
+    @media (min-width: 1024px) {
+      .card-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+    
+    /* 🔗 Card Links */
+    .card-link {
+      text-decoration: none;
+      display: block;
+      color: inherit;
+    }
+    .card-link:visited {
+      color: inherit;
+    }
+    
+    /* 🖼 Card Background Image */
+    .service-card {
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      height: 320px;
+      min-height: 320px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    /* 🌫 Default dark overlay */
+    .service-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.35);
+      z-index: 0;
+      transition: background-color 0.3s ease;
+    }
+    
+    /* 🌚 Hover effect: darker overlay */
+    .service-card:hover::before {
+      background-color: rgba(0, 0, 0, 0.55);
+    }
+    
+    /* ✍️ Overlay content */
+    .overlay {
+      position: relative;
+      z-index: 2; /* por encima del overlay negro */
+      width: 100%;
+      height: 100%;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 1.5rem;
+      font-family: 'Times New Roman', Times, serif;
+    }
+    
+    /* 📝 Headings */
+    .overlay h3 {
+      font-size: 2rem;
+      margin: 0;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    }
+    
+    /* 🧾 Paragraphs */
+    .overlay p {
+      font-size: 1.1rem;
+      margin-top: 0.8rem;
+      max-width: 700px;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    }
+    
+    /* 📱 Mobile styles */
+    @media (max-width: 768px) {
+      .card-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0;
+      }
+      .service-card {
+        width: 100vw;
+        height: 300px;
+      }
+      .overlay h3 {
+        font-size: 1.6rem;
+      }
+      .overlay p {
+        font-size: 1rem;
+      }
+    }
+    
+    /* 🩶 Gray hover panel with margin */
+    .hover-panel {
+      position: absolute;
+      top: 8%;
+      left: 6%;
+      width: 88%;
+      height: 84%;
+      background-color: rgba(147, 154, 169, 0.80);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 1; /* justo debajo del texto */
+      pointer-events: none;
+      border-radius: 10px;
+    }
+    
+    /* Mostrar el panel gris en hover */
+    .service-card:hover .hover-panel {
+      opacity: 1;
+    }
+    
+    /* ─── Asegurar que h3 y p siempre estén por encima del hover-panel ─── */
+    .overlay h3,
+    .overlay p {
+      position: relative;
+      z-index: 3;
+    }
+    </style>
+    </code>
